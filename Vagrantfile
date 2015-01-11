@@ -16,6 +16,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     web.vm.network :private_network, ip: "192.168.33.110"
     web.vm.provision :shell, :path => "script/install/root/bootstrap.sh"
     web.vm.provision :shell, :path => "script/install/vagrant/bootstrap.sh",privileged: false
-    web.vm.provision :shell, :path => "script/install/settings/bootstrap.sh"
+    web.vm.provision :shell, :path => "script/settings/bootstrap.sh"
   end
 end
