@@ -1,4 +1,5 @@
 .vagrant
 script/keys/private_key_for_github
+script/keys/password_for_private_key
 script/install/vagrant/install-private.sh
 
