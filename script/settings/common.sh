@@ -9,7 +9,7 @@ cp -rf /vagrant/script/templates/vh.conf /etc/httpd/conf.d/vh.conf
 mkdir -p /var/log/httpd_manavee
 chown -R vagrant /var/log/httpd_manavee
 
-if [ ! `cat /etc/group|grep "contentsuser" 2>&1 > /dev/null;echo $?` ]; then
+if [ `cat /etc/group|grep "contentsuser" 2>&1 > /dev/null;echo $?` -gt 0 ]; then
     groupadd contentsuser
 fi
 usermod -a -G contentsuser vagrant 
